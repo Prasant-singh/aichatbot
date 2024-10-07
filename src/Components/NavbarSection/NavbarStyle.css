@@ -1,0 +1,21 @@
+ul li{
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Ethnocentric";
+  src: url("../../Fonts/ethnocentric_rg.otf") format("opentype");
+}
+
+
+
+.logo{
+  font-family: "Ethnocentric";
+}
+
+
+.list_style li:hover{
+  background-color: rgb(92, 95, 95);
+  border-radius: 5.25rem;
+  transition: 0.7s;
+}

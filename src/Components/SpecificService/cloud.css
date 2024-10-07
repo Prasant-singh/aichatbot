@@ -1,0 +1,110 @@
+/* cloud.css */
+.cloud-services-container {
+  text-align: center;
+  background-color: #1e1e1e;
+  padding: 20px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cloud-services-container h1, .cloud-services-container h2 {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.cloud-services-container a {
+  background-color: rgb(65, 65, 212);
+  color: #ffffff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.cloud-services-container a:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.cloud-services-container h1, .cloud-services-container h2{
+  font-weight: bold;
+  font-size: 1.9rem;
+  color: white;
+}
+.column {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-column, .right-column {
+  max-width: 30%;
+}
+
+.center-column {
+  max-width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.central-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.service-item {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.icon {
+  font-size: 2em;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.service-item h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.service-item p {
+  font-size: 1em;
+}
+
+/* Light theme */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark theme */
+body.dark-mode {
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .left-column, .right-column {
+    max-width: 100%;
+  }
+
+  .center-column {
+    max-width: 100%;
+  }
+}

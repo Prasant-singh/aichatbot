@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px; /* Default font size to convert px to rem */
+}
+
+.projects {
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  max-height: 42rem;
+  max-width: 72rem; /* 1100px / 16 = 72rem */
+  padding: 1.5rem; /* 20px / 16 = 1.25rem */
+  border-radius: 0.5rem; /* 8px / 16 = 0.5rem */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 2px and 4px / 16 = 0.125rem and 0.25rem */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-container.reverse {
+  flex-direction: row-reverse; 
+}
+
+.image-wrapper,
+.description-wrapper {
+  flex: 1; /* Make each take up 50% of the container */
+  max-width: 50%; /* Ensure they each take up no more than 50% of the container */
+}
+
+.image-wrapper img {
+  width: 100%;
+  padding: 30px; /* Ensure image doesn't exceed its container */
+  border-radius: 3.25rem; /* 4px / 16 = 0.25rem */
+  opacity: 0;
+}
+
+.description-wrapper {
+  /* Use clamp for responsive padding */
+  box-sizing: border-box;
+  background-color: #060606c3;
+  padding: 1.125rem; /* 18px / 16 = 1.125rem */
+  border-top-right-radius: 3.25rem;
+  opacity: 0;
+}
+
+.description-wrapper p {
+  font-size: 1rem; /* Use clamp for responsive font size */
+  line-height: 1.5;
+  color: #948f8f;
+}
+
+.description-wrapper ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.description-wrapper li {
+  color: rgb(177, 183, 190);
+}
+
+.card-logo {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(220, 222, 225);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 50rem) {
+  /* 800px / 16 = 50rem */
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-wrapper,
+  .description-wrapper {
+    max-width: 100%;
+  }
+
+  .description-wrapper {
+    padding: clamp(
+      0.625rem,
+      4vw,
+      1rem
+    ); /* Adjust padding for smaller screens */
+  }
+
+  .description-wrapper p {
+    font-size: clamp(
+      1rem,
+      3vw,
+      1.25rem
+    ); 
+    text-align: justify;/* Adjust font size for smaller screens */
+  }
+
+  
+  .image-container.reverse {
+    flex-direction: column;
+  }
+
+  .image-wrapper img {
+    padding: 0; 
+  }
+
+  .image-wrapper,
+  .description-wrapper {
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 1;
+  animation: fadeInLeft 0.5s ease-in-out forwards;
+}
+
+.fade-in-right {
+  opacity: 1;
+  animation: fadeInRight 0.5s ease-in-out forwards;
+}

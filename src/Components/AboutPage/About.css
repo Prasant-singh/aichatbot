@@ -1,0 +1,93 @@
+.about-us-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: clamp(2rem, 5vw, 50px); /* Adjust as needed */
+  max-width: 800px;
+  text-align: left;
+  padding: 50px 40px; /* Adjust as needed */
+  box-sizing: border-box;
+  background-color: white;
+ 
+}
+
+.about-us-content {
+  flex: 1;
+  max-width: clamp(700px, 50%, 900px); /* Adjust as needed */
+  margin-right: clamp(1rem, 5%, 50px); /* Adjust as needed */
+  margin-bottom: 5px;
+}
+
+.about-us-title {
+  font-size:1.5rem;
+  font-weight: bold; /* Adjust as needed */ /* Adjust as needed */
+  text-align: justify;
+  color: #000000;
+  margin-bottom: clamp(0.8rem, 2vw, 2px); /* Adjust as needed */
+  
+}
+
+.about-us-text {
+  font-size: clamp(0.9rem, 2vw, 1.1rem); /* Adjust as needed */
+  color: #000000;
+  margin-bottom: clamp(1rem, 2vw, 20px); /* Adjust as needed */
+  padding: clamp(0.5rem, 1vw, 10px); /* Adjust as needed */
+  line-height: 1.5;
+}
+.tr{
+  text-align: center;
+}
+
+.about-us-link {
+  font-size: clamp(0.9rem, 2vw, 1.1rem); /* Adjust as needed */
+  color: #007bff;
+  text-decoration: none;
+  margin-right: clamp(0.5rem, 1.5vw, 20px); /* Adjust as needed */
+  transition: all 0.3s ease-in-out;
+}
+
+.about-us-link:hover {
+  color: #0056b3;
+}
+
+.about-us-button {
+  font-size: clamp(0.9rem, 2vw, 1.1rem); /* Adjust as needed */
+  margin-top: clamp(1rem, 3vw, 20px); /* Adjust as needed */
+  border-radius: 5px;
+  padding: clamp(0.5rem, 1vw, 10px) clamp(1rem, 2vw, 20px); /* Adjust as needed */
+  border: none;
+  background-color: #007bff;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-us-button:hover {
+  background-color: #0056b3;
+}
+.rrr{
+  text-align: center;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .about-us-content {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .about-us-title, .about-us-text {
+    padding: clamp(0.5rem, 2vw, 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .about-us-text {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+  }
+}

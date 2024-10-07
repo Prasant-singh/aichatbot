@@ -1,0 +1,119 @@
+/* cloudcontact.css */
+
+.cloud-contact-container {
+    background: linear-gradient(145deg, #2f3132 0%, #23272b 100%);
+    color: #f8f9fa;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+  
+  .cloud-contact-container h2 {
+    color: #dab882;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  
+  .cloud-contact-container .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .cloud-contact-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .cloud-contact-container input,
+  .cloud-contact-container textarea,
+  .cloud-contact-container select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #f8f9fa;
+    font-size: 1em;
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  
+  .cloud-contact-container textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .cloud-contact-container .error {
+    color: #e67e22;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
+  .cloud-contact-container button {
+    background-color: rgb(65, 65, 212);
+    color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .cloud-contact-container button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cloud-contact-container {
+      padding: 30px 15px;
+    }
+  
+    .cloud-contact-container h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  
+    .cloud-contact-container input,
+    .cloud-contact-container textarea,
+    .cloud-contact-container select {
+      padding: 10px;
+    }
+  
+    .cloud-contact-container button {
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cloud-contact-container {
+      padding: 20px 10px;
+    }
+  
+    .cloud-contact-container h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+  
+    .cloud-contact-container input,
+    .cloud-contact-container textarea,
+    .cloud-contact-container select {
+      padding: 8px;
+    }
+  
+    .cloud-contact-container button {
+      font-size: 0.9em;
+      padding: 8px 15px;
+    }
+  }
+  
